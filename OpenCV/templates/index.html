@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Live Camera Stream</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1e1e2f, #3a3a5f);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 0 25px rgba(0,0,0,0.5);
+        }
+
+        h1 {
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        img {
+            width: 640px;
+            height: 480px;
+            border-radius: 12px;
+            border: 3px solid #00ffd5;
+            box-shadow: 0 0 15px rgba(0, 255, 213, 0.6);
+        }
+
+        .footer {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🎥 Live Camera Streaming</h1>
+    <img src="{{ url_for('video') }}" alt="Live Stream">
+    <div class="footer">Powered by Flask & OpenCV</div>
+</div>
+
+</body>
+</html>
